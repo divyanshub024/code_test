@@ -5,6 +5,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Mimic a runtime error: null dereference
+    final String? label = null;
+    debugPrint(label!.length.toString());
+
     return Scaffold(
       appBar: AppBar(title: Text('Home')),
       body: Center(child: Text('Home')),
